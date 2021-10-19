@@ -1,0 +1,23 @@
+[package]
+name = "collectfiles"
+version = "1.0.0"
+authors = ["just-do-halee <just.do.halee@gmail.com>"]
+homepage = "https://github.com/just-do-halee/collectfiles"
+repository = "https://github.com/just-do-halee/collectfiles"
+documentation = "https://docs.rs/collectfiles"
+
+description = "Collects accurate files while running in parallel through directories. (Simple, Fast, Powerful)"
+
+readme = "README.md"
+
+keywords = ["directory", "file", "parallel", "walk", "collect"]
+categories = ["filesystem", "development-tools"]
+
+license = "MIT OR Apache-2.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rayon = "1.5.1"
+regex = "1.5.4"
