@@ -210,20 +210,20 @@ fn collect_files(
 
 #[cfg(test)]
 mod tests {
-    use super::*;
+    // use super::*;
     #[test]
     fn it_works() {
-        let c = CollectFiles("/Users/hwakyeom/programs/")
-            .with_depth(1)
-            .with_target_regex(".md$")
-            .with_hook(|path| path.with_extension("mutated"));
-        println!("{:#?}", c.collect());
-        println!(
-            "entry: {:?}\ndepth: {:?}\nhook: {:?}\n regex: {:?}",
-            c.as_root_dir(),
-            c.as_depth(),
-            c.as_hook(),
-            c.as_target_regex()
-        )
+        // let c = CollectFiles("/Users/hwakyeom/programs/")
+        //     .with_depth(1)
+        //     .with_target_regex(".md$")
+        //     .with_hook(|path| path.with_extension("mutated"));
+        // println!("{:#?}", c.collect());
+        // println!(
+        //     "entry: {:?}\ndepth: {:?}\nhook: {:?}\n regex: {:?}",
+        //     c.as_root_dir(),
+        //     c.as_depth(),
+        //     c.as_hook(),
+        //     c.as_target_regex()
+        // )
     }
 }
