@@ -23,7 +23,7 @@ Collects accurate files while running in parallel through directories. (Simple, 
 
 ```toml
 [dependencies]
-collectfiles = "1.0.0"
+collectfiles = "1.1.0"
 ```
 
 ---
@@ -36,6 +36,13 @@ let vec = CollectFiles("/Users/hwakyeom/programs/")
         .with_depth(1)
         .with_target_regex(".md$")
         .with_hook(|path| path.with_extension("mutated"))
+        .with_unwrap_or_else(|e| {
+            if e.kind() == io::ErrorKind::NotFound {
+                PathBuf::from("/Users/other/")
+            } else {
+               panic!("{:?}", e)
+            }
+        })
         .collect();
 
 println!("{:#?}", vec);
